@@ -1,10 +1,9 @@
-import {IUpdateProductRequest } from "../../interfaces/product";
-import { IUserResponse } from "../../interfaces/user";
+import {IProductResponse, IUpdateProductRequest } from "../../interfaces/product";
 import { prisma } from "../../prisma";
 
-export const updateProductService = async (data:IUpdateProductRequest, id: string):Promise<IUserResponse> =>{
+export const updateProductService = async (data:IUpdateProductRequest, id: string):Promise<IProductResponse> =>{
 
-    const product = await prisma.product.update({
+    const product = await prisma.products.update({
         data:{
             ...data
         },
