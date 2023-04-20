@@ -16,4 +16,4 @@ export const createUserService = async (data: ICreateUserRequest):Promise<IUserR
   const { password: passwd, ...userNoPassword } = user;
 
   return userNoPassword;
-};
+}
