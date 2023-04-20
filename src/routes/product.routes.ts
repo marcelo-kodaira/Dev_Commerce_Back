@@ -14,8 +14,8 @@ export const productRoutes = () => {
     
   routes.post('', createProductController);
   routes.get('', readProductsController);
-  routes.get('/:name', getNameProductController);
-  routes.get('/:id', readIdProductController)
+  routes.get('/name/:name', getNameProductController);
+  routes.get('/id/:id', readIdProductController)
   routes.patch('/:id',authMiddleware,isOwner,updateProductController);
   routes.delete('/:id', authMiddleware, isOwner, deleteProductController);
   
