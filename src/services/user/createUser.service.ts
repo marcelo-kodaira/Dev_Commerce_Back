@@ -6,7 +6,7 @@ export const createUserService = async (data: ICreateUserRequest):Promise<IUserR
   const passwordHash = bcrypt.hashSync(data.password, 10);
   const { password, ...rest } = data;
 
-  const user = await prisma.user.create({
+  const user = await prisma.users.create({
     data: {
       ...rest,
       password: passwordHash,

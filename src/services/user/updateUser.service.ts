@@ -3,7 +3,7 @@ import { prisma } from "../../prisma";
 
 export const updatedUserService = async (data:IUpdateUserRequest, id: string) =>{
 
-    const user = await prisma.user.update({
+    const user = await prisma.users.update({
         data:{
             ...data
         },

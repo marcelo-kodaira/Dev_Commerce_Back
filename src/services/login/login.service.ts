@@ -5,7 +5,7 @@ import ErrorHttp from '../../error/Error';
 import { ILoginRequest } from '../../interfaces/user';
 
 export const loginService = async ({ email, password }: ILoginRequest) => {
-  const account = await prisma.user.findUnique({
+  const account = await prisma.users.findUnique({
     where: {
       email,
     }
@@ -22,7 +22,7 @@ export const loginService = async ({ email, password }: ILoginRequest) => {
   }
 
   const token = jwt.sign(
-    { id: account.id, is_buyer: account.is_buyer },
+    { id: account.id, },
     process.env.SECRET_KEY as string,
     {
       expiresIn: '1d',

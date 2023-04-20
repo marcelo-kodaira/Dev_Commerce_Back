@@ -1,9 +1,9 @@
-import { IUserResponse } from "../../interfaces/user";
+import { IProductResponse } from "../../interfaces/product";
 import { prisma } from "../../prisma"
 
-export const readProductsService = async ():Promise<IUserResponse[]> =>{
+export const readProductsService = async ():Promise<IProductResponse[]> =>{
 
-    const products = await prisma.product.findMany();
+    const products = await prisma.products.findMany();
 
     return products;
 }
