@@ -1,10 +1,13 @@
 import { IProductResponse } from "../../interfaces/product";
 import { prisma } from "../../prisma"
 
-export const readProductsService = async ():Promise<IProductResponse[]> =>{
-
+export const readNameProductService = async (name:string):Promise<IProductResponse[]> =>{
     const products = await prisma.products.findMany({
-        select:{
+        where:{
+            name:{
+                contains:name
+            }
+        },select:{
             id: true,
             name: true,
             price: true,
@@ -17,6 +20,5 @@ export const readProductsService = async ():Promise<IProductResponse[]> =>{
             }
           }
     });
-
-    return products;
+    return products
 }

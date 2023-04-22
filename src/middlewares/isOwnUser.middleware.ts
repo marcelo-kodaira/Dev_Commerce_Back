@@ -1,6 +1,6 @@
 import { NextFunction, Request, Response } from "express";
 
-export const isOwner = (req: Request, res: Response, next: NextFunction) =>{
+export const isOwnUser = (req: Request, res: Response, next: NextFunction) =>{
     const {id} = req.params;
     const userId = req.user.id;
 
