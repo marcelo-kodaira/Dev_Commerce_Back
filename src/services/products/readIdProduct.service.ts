@@ -6,7 +6,18 @@ export const readIdProductService = async (id: string):Promise<IProductResponse 
     const product = await prisma.products.findUnique({
         where:{
             id
-        }
+        }, select:{
+            id: true,
+            name: true,
+            price: true,
+            description: true,
+            user:{
+              select:{
+                name: true,
+                email: true
+              }
+            }
+          }
     });
 
     return product

@@ -3,8 +3,9 @@ import { createProductService } from "../../services/products/createProduct.serv
 
 export const createProductController = async(req: Request, res: Response) =>{
     const data = req.body;
+    const id = req.user.id
 
-    const product = await createProductService(data);
+    const product = await createProductService(data,id);
 
     return res.status(201).json(product);
 
