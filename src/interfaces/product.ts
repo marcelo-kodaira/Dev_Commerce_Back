@@ -5,9 +5,9 @@ export interface IProductRequest{
 }
 
 export interface IUpdateProductRequest{
-    name: string;
-    price: number;
-    description: string;
+    name?: string;
+    price?: number;
+    description?: string;
 }
 
 export interface IProductResponse{
