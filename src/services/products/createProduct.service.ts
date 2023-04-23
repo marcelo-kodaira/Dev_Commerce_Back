@@ -3,6 +3,8 @@ import { prisma } from "../../prisma";
 
 export const createProductService = async(data:IProductRequest,id:string):Promise<IProductResponse> =>{
 
+    data.price = +data.price.toFixed(2)
+
 
     const product = await prisma.products.create({
         data: {

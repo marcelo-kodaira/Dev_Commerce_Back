@@ -4,13 +4,14 @@ import { createProductController } from '../controllers/products/createProduct.c
 import { updateProductController } from '../controllers/products/updateProduct.controller';
 import { deleteProductController } from '../controllers/products/deleteProduct.controller';
 import { readProductsController } from '../controllers/products/readProducts.controller';
-import { readNameProductController } from '../controllers/products/readNameProduct.controller';
 import { readIdProductController } from '../controllers/products/readIdProduct.controller';
 import isProductOwner from '../middlewares/isProductOwner.middleware';
 import { prisma } from '../prisma';
 import { readUserProductController } from '../controllers/products/readUserProducts.controller';
 
 const routes = Router();
+
+
 
 export const productRoutes = () => {
     
@@ -19,8 +20,6 @@ export const productRoutes = () => {
   routes.get('',authMiddleware, readProductsController);
 
   routes.get('/user',authMiddleware,readUserProductController)
-
-  routes.get('/name/:name', authMiddleware, readNameProductController);
 
   routes.get('/id/:id', authMiddleware, readIdProductController)
 
