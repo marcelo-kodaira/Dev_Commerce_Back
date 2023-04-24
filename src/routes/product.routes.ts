@@ -21,7 +21,7 @@ export const productRoutes = () => {
 
   routes.get('/user',authMiddleware,readUserProductController)
 
-  routes.get('/id/:id', authMiddleware, readIdProductController)
+  routes.get('/:id', authMiddleware, readIdProductController)
 
   routes.patch('/:id',authMiddleware,isProductOwner(prisma.products),updateProductController);
   
