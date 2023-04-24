@@ -38,7 +38,7 @@
   "scripts": {
     "dev": "ts-node-dev --ignore-watch node_modules src/server.ts",
     "test": "jest",
-    "start": "node dist/server.js",
+    "start": " tsc && node dist/server.js",
     "build": "tsc"
   }
 }
