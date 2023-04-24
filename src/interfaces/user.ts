@@ -7,7 +7,7 @@ export interface ICreateUserRequest {
 export interface IUpdateUserRequest {
   name?: string;
   email?: string;
-  password?:string;
+  password:string;
 }
 
 export interface IUserResponse {

@@ -11,12 +11,11 @@ export const readProductsService = async (name?:string, price?:string):Promise<I
       orderBy.price = price === 'lowest' ? 'asc' : 'desc';
     }
 
-    console.log(price)
-
     const products = await prisma.products.findMany({
         where:{
           name:{
-            contains: name
+            contains: name,
+            mode: "insensitive"
           }
         },
         select:{
@@ -24,12 +23,6 @@ export const readProductsService = async (name?:string, price?:string):Promise<I
             name: true,
             price: true,
             description: true,
-            user:{
-              select:{
-                name: true,
-                email: true
-              }
-            }
           },
           orderBy
     });

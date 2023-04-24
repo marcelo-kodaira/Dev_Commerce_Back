@@ -14,11 +14,11 @@ const isProductOwner = (model: any) => async (req: Request, res: Response, next:
   });
 
   if (!product) {
-    return res.status(404).json({ message: 'Product not found!' });
+    return res.status(404).json({ message: 'Produto não encontrado.' });
   }
 
   if (product.user.id !== userId) {
-    return res.status(401).json({ message: 'Unauthorized' });
+    return res.status(403).json({ message: 'Não autorizado' });
   }
 
   next();

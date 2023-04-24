@@ -5,7 +5,7 @@ export const authMiddleware = (req: Request,res: Response,next: NextFunction) =>
   const auth = req.headers.authorization;
 
   if (!auth) {
-    return res.status(401).json({ message: "Invalid or missing token." });
+    return res.status(401).json({ message: "Providencie um token." });
   }
 
   const [_, token] = auth.split(" ");
@@ -15,7 +15,7 @@ export const authMiddleware = (req: Request,res: Response,next: NextFunction) =>
     process.env.SECRET_KEY as string,
     (error: any, decoded: any) => {
       if (error) {
-        return res.status(401).json({ message: "The token provided is invalid." });
+        return res.status(401).json({ message: "Token inválido." });
       }
 
       req.user = {

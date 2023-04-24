@@ -8,5 +8,5 @@ export const isOwnUser = (req: Request, res: Response, next: NextFunction) =>{
        return next();
     }
 
-    return res.status(403).json({ message: "You can only change your own information" });
+    return res.status(403).json({ message: "Você pode alterar apenas o seu perfil." });
 }

@@ -12,13 +12,13 @@ export const loginService = async ({ email, password }: ILoginRequest) => {
   });
 
   if (!account) {
-    throw new ErrorHttp('Wrong email or password', 403);
+    throw new ErrorHttp('E-mail incorreto ou senha incorreta.', 403);
   }
 
   const passwordMatch = bcrypt.compareSync(password, account.password);
 
   if (!passwordMatch) {
-    throw new ErrorHttp('Wrong email or password', 403);
+    throw new ErrorHttp('E-mail incorreto ou senha incorreta.', 403);
   }
 
   const token = jwt.sign(

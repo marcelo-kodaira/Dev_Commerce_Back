@@ -14,7 +14,7 @@ export const createUserService = async (data: ICreateUserRequest):Promise<IUserR
   })
 
   if(emailAlreadyExist){
-    throw new ErrorHttp("Email already registered",403)
+    throw new ErrorHttp("Email já cadastrado",400)
   }
 
   const user = await prisma.users.create({
