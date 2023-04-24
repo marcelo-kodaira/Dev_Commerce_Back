@@ -8,7 +8,10 @@ export const readProductsService = async (name?:string, price?:string):Promise<I
     let orderBy: Prisma.ProductsOrderByWithRelationInput = {}
 
     if (price) {
-      orderBy.price = price === 'lowest' ? 'asc' : 'desc';
+      if(price === 'lowest'){
+        orderBy.price = 'asc'
+      }else if(price === 'highest')
+      orderBy.price = 'desc';
     }
 
     const products = await prisma.products.findMany({
