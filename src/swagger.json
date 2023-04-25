@@ -94,7 +94,7 @@
 						"description": "Token inválido"
 					},
 					"403": {
-						"description": "Você pode deletar apenas sua própria conta"
+						"description": "Não autorizado"
 					}
 				}
 			},
@@ -127,7 +127,7 @@
 						"description": "Token inválido"
 					},
 					"403": {
-						"description": "Você pode deletar apenas sua própria conta"
+						"description": "Não autorizado"
 					}
 				}
 			}
@@ -373,7 +373,7 @@
 						"description": "Token inválido"
 					},
 					"403":{
-						"description": "Você pode deletar apenas produtos cadastrados por você"
+						"description": "Não autorizado"
 					}
 				}
 			},
@@ -406,7 +406,7 @@
 						"description": "Token inválido"
 					},
 					"403": {
-						"description": "Você pode deletar apenas produtos cadastrados por você"
+						"description": "Não autorizado"
 					}
 				}
 			}
