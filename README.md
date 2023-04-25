@@ -12,6 +12,7 @@ Este sistema foi desenvolvido em Node.js utilizando as seguintes tecnologias:
 - Framework Express para criação de rotas e APIs REST.
 - Prisma
 - Mongo DB
+- Swagger
 
 
 ## Documentação
