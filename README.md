@@ -14,7 +14,7 @@ Este sistema foi desenvolvido em Node.js utilizando as seguintes tecnologias:
 - Mongo DB
 
 
-## documentação
+## Documentação
 https://api-sxb.onrender.com/docs/
 
 
