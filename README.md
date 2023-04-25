@@ -2,7 +2,7 @@
 
 ## Descrição
 
-API desenvolvida para o gerencimento de imobiliárias, sendo possível realizar o CRUD de categorias, agendamentos, imóveis e usuários.
+API desenvolvida para um aplicação de venda de produtos, o front end da aplicação foi feito em React.
 
 ## Tecnologias
 Este sistema foi desenvolvido em Node.js utilizando as seguintes tecnologias:
