@@ -48,6 +48,11 @@
 			"patch":{
 				"summary": "Atualiza um usuário",
 				"description": "Atualiza as informações de um usuário pelo ID",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Usuários"],
 				"operationId": "updateUser",
 				"parameters": [
@@ -96,6 +101,11 @@
 			"delete":{
 				"summary": "Deleta um produto",
 				"description": "Rota responsável por deletar um usuário",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Usuários"],
 				"operationId": "deleteUser",
 				"parameters": [
@@ -162,6 +172,11 @@
 			"post":{
 				"summary": "Cadastra um produto",
 				"description": "Rotas responsável por cadastrar um produto",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Produtos"],
 				"operationId": "postProduct",
 				"requestBody": {
@@ -195,6 +210,11 @@
 			"get":{
 				"summary": "Lista todos os  produto",
 				"description": "Rota responsável por listar todos os produtos",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Produtos"],
 				"operationId": "getProducts",
 				"parameters": [
@@ -237,6 +257,11 @@
 			"get":{
 				"summary": "Lista todos os produtos de um usuário",
 				"description": "Lista todos os produtos do usuário proprietário do token fornecido/",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Produtos"],
 				"operationId": "getMyProducts",
 				"responses": {
@@ -262,6 +287,11 @@
 			"get":{
 				"summary": "Lista um produto",
 				"description": "Lista um produto pelo ID passado",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Produtos"],
 				"operationId": "getProductId",
 				"parameters": [
@@ -297,6 +327,11 @@
 			"patch":{
 				"summary": "Atualiza um produto",
 				"description": "Rota responsável por atualizar um produto pelo ID",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Produtos"],
 				"operationId": "updateProduct",
 				"parameters": [
@@ -345,6 +380,11 @@
 			"delete":{
 				"summary": "Deleta um Produto",
 				"description": "Rota responsável por deletar um produto pelo ID",
+				"security": [
+					{
+					"bearerAuth": []
+					}
+				],
 				"tags": ["Produtos"],
 				"operationId": "deleteProduct",
 				"parameters": [
